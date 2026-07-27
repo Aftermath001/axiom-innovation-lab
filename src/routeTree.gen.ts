@@ -9,61 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SolutionsRouteImport } from './routes/solutions'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as IndustriesRouteImport } from './routes/industries'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ConsultationRouteImport } from './routes/consultation'
-import { Route as CaseStudiesRouteImport } from './routes/case-studies'
-import { Route as CareersRouteImport } from './routes/careers'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as ConsultationRouteImport } from './routes/consultation'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as ServicesAiAutomationRouteImport } from './routes/services/ai-automation'
+import { Route as ServicesCloudSolutionsRouteImport } from './routes/services/cloud-solutions'
+import { Route as ServicesCybersecurityRouteImport } from './routes/services/cybersecurity'
+import { Route as ServicesDataAnalyticsRouteImport } from './routes/services/data-analytics'
+import { Route as ServicesDigitalTransformationRouteImport } from './routes/services/digital-transformation'
+import { Route as ServicesItConsultingRouteImport } from './routes/services/it-consulting'
+import { Route as ServicesManagedItServicesRouteImport } from './routes/services/managed-it-services'
+import { Route as ServicesSoftwareDevelopmentRouteImport } from './routes/services/software-development'
 
-const SolutionsRoute = SolutionsRouteImport.update({
-  id: '/solutions',
-  path: '/solutions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndustriesRoute = IndustriesRouteImport.update({
-  id: '/industries',
-  path: '/industries',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsultationRoute = ConsultationRouteImport.update({
-  id: '/consultation',
-  path: '/consultation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudiesRoute = CaseStudiesRouteImport.update({
-  id: '/case-studies',
-  path: '/case-studies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -71,11 +39,94 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultationRoute = ConsultationRouteImport.update({
+  id: '/consultation',
+  path: '/consultation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAiAutomationRoute = ServicesAiAutomationRouteImport.update({
+  id: '/services/ai-automation',
+  path: '/services/ai-automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesCloudSolutionsRoute = ServicesCloudSolutionsRouteImport.update({
+  id: '/services/cloud-solutions',
+  path: '/services/cloud-solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesCybersecurityRoute = ServicesCybersecurityRouteImport.update({
+  id: '/services/cybersecurity',
+  path: '/services/cybersecurity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesDataAnalyticsRoute = ServicesDataAnalyticsRouteImport.update({
+  id: '/services/data-analytics',
+  path: '/services/data-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesDigitalTransformationRoute =
+  ServicesDigitalTransformationRouteImport.update({
+    id: '/services/digital-transformation',
+    path: '/services/digital-transformation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesItConsultingRoute = ServicesItConsultingRouteImport.update({
+  id: '/services/it-consulting',
+  path: '/services/it-consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesManagedItServicesRoute =
+  ServicesManagedItServicesRouteImport.update({
+    id: '/services/managed-it-services',
+    path: '/services/managed-it-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesSoftwareDevelopmentRoute =
+  ServicesSoftwareDevelopmentRouteImport.update({
+    id: '/services/software-development',
+    path: '/services/software-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -86,9 +137,17 @@ export interface FileRoutesByFullPath {
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
+  '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-solutions': typeof ServicesCloudSolutionsRoute
+  '/services/cybersecurity': typeof ServicesCybersecurityRoute
+  '/services/data-analytics': typeof ServicesDataAnalyticsRoute
+  '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
+  '/services/it-consulting': typeof ServicesItConsultingRoute
+  '/services/managed-it-services': typeof ServicesManagedItServicesRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -99,9 +158,17 @@ export interface FileRoutesByTo {
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
+  '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-solutions': typeof ServicesCloudSolutionsRoute
+  '/services/cybersecurity': typeof ServicesCybersecurityRoute
+  '/services/data-analytics': typeof ServicesDataAnalyticsRoute
+  '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
+  '/services/it-consulting': typeof ServicesItConsultingRoute
+  '/services/managed-it-services': typeof ServicesManagedItServicesRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -113,9 +180,17 @@ export interface FileRoutesById {
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
+  '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-solutions': typeof ServicesCloudSolutionsRoute
+  '/services/cybersecurity': typeof ServicesCybersecurityRoute
+  '/services/data-analytics': typeof ServicesDataAnalyticsRoute
+  '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
+  '/services/it-consulting': typeof ServicesItConsultingRoute
+  '/services/managed-it-services': typeof ServicesManagedItServicesRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -128,9 +203,17 @@ export interface FileRouteTypes {
     | '/consultation'
     | '/contact'
     | '/industries'
-    | '/services'
     | '/sitemap.xml'
     | '/solutions'
+    | '/services/ai-automation'
+    | '/services/cloud-solutions'
+    | '/services/cybersecurity'
+    | '/services/data-analytics'
+    | '/services/digital-transformation'
+    | '/services/it-consulting'
+    | '/services/managed-it-services'
+    | '/services/software-development'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -141,9 +224,17 @@ export interface FileRouteTypes {
     | '/consultation'
     | '/contact'
     | '/industries'
-    | '/services'
     | '/sitemap.xml'
     | '/solutions'
+    | '/services/ai-automation'
+    | '/services/cloud-solutions'
+    | '/services/cybersecurity'
+    | '/services/data-analytics'
+    | '/services/digital-transformation'
+    | '/services/it-consulting'
+    | '/services/managed-it-services'
+    | '/services/software-development'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -154,9 +245,17 @@ export interface FileRouteTypes {
     | '/consultation'
     | '/contact'
     | '/industries'
-    | '/services'
     | '/sitemap.xml'
     | '/solutions'
+    | '/services/ai-automation'
+    | '/services/cloud-solutions'
+    | '/services/cybersecurity'
+    | '/services/data-analytics'
+    | '/services/digital-transformation'
+    | '/services/it-consulting'
+    | '/services/managed-it-services'
+    | '/services/software-development'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -168,74 +267,26 @@ export interface RootRouteChildren {
   ConsultationRoute: typeof ConsultationRoute
   ContactRoute: typeof ContactRoute
   IndustriesRoute: typeof IndustriesRoute
-  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolutionsRoute: typeof SolutionsRoute
+  ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
+  ServicesCloudSolutionsRoute: typeof ServicesCloudSolutionsRoute
+  ServicesCybersecurityRoute: typeof ServicesCybersecurityRoute
+  ServicesDataAnalyticsRoute: typeof ServicesDataAnalyticsRoute
+  ServicesDigitalTransformationRoute: typeof ServicesDigitalTransformationRoute
+  ServicesItConsultingRoute: typeof ServicesItConsultingRoute
+  ServicesManagedItServicesRoute: typeof ServicesManagedItServicesRoute
+  ServicesSoftwareDevelopmentRoute: typeof ServicesSoftwareDevelopmentRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/solutions': {
-      id: '/solutions'
-      path: '/solutions'
-      fullPath: '/solutions'
-      preLoaderRoute: typeof SolutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/industries': {
-      id: '/industries'
-      path: '/industries'
-      fullPath: '/industries'
-      preLoaderRoute: typeof IndustriesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consultation': {
-      id: '/consultation'
-      path: '/consultation'
-      fullPath: '/consultation'
-      preLoaderRoute: typeof ConsultationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-studies': {
-      id: '/case-studies'
-      path: '/case-studies'
-      fullPath: '/case-studies'
-      preLoaderRoute: typeof CaseStudiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -245,11 +296,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultation': {
+      id: '/consultation'
+      path: '/consultation'
+      fullPath: '/consultation'
+      preLoaderRoute: typeof ConsultationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ai-automation': {
+      id: '/services/ai-automation'
+      path: '/services/ai-automation'
+      fullPath: '/services/ai-automation'
+      preLoaderRoute: typeof ServicesAiAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/cloud-solutions': {
+      id: '/services/cloud-solutions'
+      path: '/services/cloud-solutions'
+      fullPath: '/services/cloud-solutions'
+      preLoaderRoute: typeof ServicesCloudSolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/cybersecurity': {
+      id: '/services/cybersecurity'
+      path: '/services/cybersecurity'
+      fullPath: '/services/cybersecurity'
+      preLoaderRoute: typeof ServicesCybersecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/data-analytics': {
+      id: '/services/data-analytics'
+      path: '/services/data-analytics'
+      fullPath: '/services/data-analytics'
+      preLoaderRoute: typeof ServicesDataAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/digital-transformation': {
+      id: '/services/digital-transformation'
+      path: '/services/digital-transformation'
+      fullPath: '/services/digital-transformation'
+      preLoaderRoute: typeof ServicesDigitalTransformationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/it-consulting': {
+      id: '/services/it-consulting'
+      path: '/services/it-consulting'
+      fullPath: '/services/it-consulting'
+      preLoaderRoute: typeof ServicesItConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/managed-it-services': {
+      id: '/services/managed-it-services'
+      path: '/services/managed-it-services'
+      fullPath: '/services/managed-it-services'
+      preLoaderRoute: typeof ServicesManagedItServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/software-development': {
+      id: '/services/software-development'
+      path: '/services/software-development'
+      fullPath: '/services/software-development'
+      preLoaderRoute: typeof ServicesSoftwareDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -264,10 +427,28 @@ const rootRouteChildren: RootRouteChildren = {
   ConsultationRoute: ConsultationRoute,
   ContactRoute: ContactRoute,
   IndustriesRoute: IndustriesRoute,
-  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolutionsRoute: SolutionsRoute,
+  ServicesAiAutomationRoute: ServicesAiAutomationRoute,
+  ServicesCloudSolutionsRoute: ServicesCloudSolutionsRoute,
+  ServicesCybersecurityRoute: ServicesCybersecurityRoute,
+  ServicesDataAnalyticsRoute: ServicesDataAnalyticsRoute,
+  ServicesDigitalTransformationRoute: ServicesDigitalTransformationRoute,
+  ServicesItConsultingRoute: ServicesItConsultingRoute,
+  ServicesManagedItServicesRoute: ServicesManagedItServicesRoute,
+  ServicesSoftwareDevelopmentRoute: ServicesSoftwareDevelopmentRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

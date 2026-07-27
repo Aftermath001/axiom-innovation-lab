@@ -24,8 +24,8 @@ const primaryLinks = [
   { to: "/industries", label: "Industries" },
   { to: "/case-studies", label: "Case Studies" },
   { to: "/about", label: "About" },
-  { to: "/blog", label: "Blog" },
-  { to: "/careers", label: "Careers" },
+  // { to: "/blog", label: "Blog" },
+  // { to: "/careers", label: "Careers" },
 ] as const;
 
 export function Navbar() {
@@ -61,7 +61,7 @@ export function Navbar() {
                   {serviceLinks.map((s) => (
                     <Link
                       key={s.slug}
-                      to="/services"
+                      to={`/services/${s.slug}`}
                       className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary/60"
                     >
                       <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand/10 text-brand ring-1 ring-brand/20">
@@ -126,13 +126,13 @@ export function Navbar() {
                     <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
                   </summary>
                   <div className="mt-2 flex flex-col gap-1 pl-1">
-                    {serviceLinks.map((s) => (
-                      <Link
-                        key={s.slug}
-                        to="/services"
-                        className="rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
-                        onClick={() => setOpen(false)}
-                      >
+                     {serviceLinks.map((s) => (
+                       <Link
+                         key={s.slug}
+                         to={`/services/${s.slug}`}
+                         className="rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
+                         onClick={() => setOpen(false)}
+                       >
                         {s.title}
                       </Link>
                     ))}

@@ -38,7 +38,7 @@ function Home() {
   return (
     <SiteLayout>
       <Hero />
-      <TrustBar />
+      {/* <TrustBar /> */}
       <Services />
       <Solutions />
       <Industries />

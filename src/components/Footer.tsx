@@ -15,10 +15,14 @@ const columns = [
   {
     title: "Services",
     links: [
-      { label: "Software Development", to: "/services" },
-      { label: "AI & Automation", to: "/services" },
-      { label: "Cloud Solutions", to: "/services" },
-      { label: "Cybersecurity", to: "/services" },
+      { label: "Software Development", to: "/services/software-development" },
+      { label: "AI & Automation", to: "/services/ai-automation" },
+      { label: "Cloud Solutions", to: "/services/cloud-solutions" },
+      { label: "Cybersecurity", to: "/services/cybersecurity" },
+      { label: "IT Consulting", to: "/services/it-consulting" },
+      { label: "Managed IT Services", to: "/services/managed-it-services" },
+      { label: "Data & Analytics", to: "/services/data-analytics" },
+      { label: "Digital Transformation", to: "/services/digital-transformation" },
     ],
   },
   {

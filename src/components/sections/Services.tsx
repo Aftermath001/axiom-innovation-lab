@@ -22,7 +22,7 @@ export function Services() {
               transition={{ duration: 0.4, delay: i * 0.04 }}
             >
               <Link
-                to="/services"
+                to={`/services/${s.slug}`}
                 className="card-hover group relative flex h-full flex-col overflow-hidden rounded-xl border border-border/60 bg-card/60 p-5"
               >
                 <span className="grid h-10 w-10 place-items-center rounded-lg bg-brand/10 text-brand ring-1 ring-brand/20 transition-transform group-hover:scale-105">

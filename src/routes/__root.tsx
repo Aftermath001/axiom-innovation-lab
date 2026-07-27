@@ -88,6 +88,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "MetaMind" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "1024" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -97,7 +102,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
     ],
     scripts: [
       {
@@ -107,6 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "MetaMind Limited",
           url: "/",
+          logo: "/favicon.png",
           description:
             "Nairobi-headquartered technology consultancy delivering software engineering, AI, cloud, cybersecurity and digital transformation.",
           address: {
