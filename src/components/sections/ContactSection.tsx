@@ -52,12 +52,12 @@ export function ContactSection() {
               or scheduling for a consultation.
             </p>
             <ul className="space-y-4 text-sm">
-              <ContactRow icon={<Mail className="h-4 w-4" />} label="Email" value="hello@metamind.co.ke" />
-              <ContactRow icon={<Phone className="h-4 w-4" />} label="Phone" value="+254 700 000 000" />
+              <ContactRow icon={<Mail className="h-4 w-4" />} label="Email" value="metamindlimited@gmail.com" />
+              <ContactRow icon={<Phone className="h-4 w-4" />} label="Phone" value="+254 798 611 952" />
               <ContactRow
                 icon={<MapPin className="h-4 w-4" />}
                 label="Nairobi HQ"
-                value="Westlands Business Park, Nairobi, Kenya"
+                value="Nairobi-CBD, Kenya"
               />
             </ul>
           </div>

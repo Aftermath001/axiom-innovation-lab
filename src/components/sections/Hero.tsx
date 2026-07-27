@@ -65,7 +65,7 @@ export function Hero() {
           className="surface-glass mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl sm:grid-cols-4"
         >
           {[
-            { k: "120+", v: "Engineers & consultants" },
+            { k: "20+", v: "Engineers & consultants" },
             { k: "40+", v: "Enterprise clients" },
             { k: "12", v: "Markets served" },
             { k: "99.99%", v: "Delivery reliability" },

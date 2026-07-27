@@ -48,7 +48,7 @@ export const serviceLinks = [
     icon: Lightbulb,
   },
   {
-    slug: "managed-it",
+    slug: "managed-it-services",
     title: "Managed IT Services",
     summary: "24/7 monitoring, support and infrastructure operations.",
     icon: Server,
