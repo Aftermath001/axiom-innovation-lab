@@ -17,7 +17,33 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/about", changefreq: "monthly", priority: "0.7" },
+        
+          // Main service page
           { path: "/services", changefreq: "monthly", priority: "0.9" },
+        
+          // Individual service pages
+          { path: "/services/ai-automation", changefreq: "monthly", priority: "0.9" },
+          { path: "/services/cloud-solutions", changefreq: "monthly", priority: "0.7" },
+          { path: "/services/cybersecurity", changefreq: "monthly", priority: "0.8" },
+          { path: "/services/data-analytics", changefreq: "monthly", priority: "0.7" },
+          {
+            path: "/services/digital-transformation",
+            changefreq: "monthly",
+            priority: "0.8",
+          },
+          { path: "/services/it-consulting", changefreq: "monthly", priority: "0.7" },
+          {
+            path: "/services/managed-it-services",
+            changefreq: "monthly",
+            priority: "0.7",
+          },
+          {
+            path: "/services/software-development",
+            changefreq: "monthly",
+            priority: "0.9",
+          },
+        
+          // Other important pages
           { path: "/solutions", changefreq: "monthly", priority: "0.8" },
           { path: "/industries", changefreq: "monthly", priority: "0.7" },
           { path: "/case-studies", changefreq: "monthly", priority: "0.8" },
