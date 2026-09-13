@@ -103,7 +103,7 @@ export const Route =
           content: "#0b1120",
         },
 
-        // GOOGLE SEARCH CONSOLE VERIFICATION
+        // GOOGLE SEARCH CONSOLE VERIFICATION google-site-verification=
         {
           name: "google-site-verification",
           content:
