@@ -258,6 +258,8 @@ export const Route =
           rel: "apple-touch-icon",
           href: "https://metamindlimited.co.ke/favicon.png",
         },
+
+        
       ],
 
       /*
