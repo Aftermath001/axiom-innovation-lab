@@ -22,20 +22,34 @@ const industryItems = [
 export const Route = createFileRoute("/services/software-development")({
   head: () => ({
     meta: [
-      { title: "Software Development Services | MetaMind" },
+      {
+        title: "Software Development Company in Kenya | MetaMind",
+      },
       {
         name: "description",
         content:
-          "Custom web applications, enterprise systems, mobile apps and SaaS platforms engineered by senior teams for scale and reliability.",
+          "Custom web applications, enterprise software, mobile apps and SaaS platforms built for businesses in Kenya and beyond.",
       },
-      { property: "og:title", content: "Software Development — MetaMind" },
+      {
+        property: "og:title",
+        content: "Software Development Company in Kenya | MetaMind",
+      },
       {
         property: "og:description",
-        content: "End-to-end software engineering for the platforms that run your business.",
+        content:
+          "End-to-end software development for scalable web applications, enterprise systems, mobile apps and SaaS platforms.",
       },
-      { property: "og:url", content: "/services/software-development" },
+      {
+        property: "og:url",
+        content: "https://metamindlimited.co.ke/services/software-development",
+      },
     ],
-    links: [{ rel: "canonical", href: "/services/software-development" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://metamindlimited.co.ke/services/software-development",
+      },
+    ],
   }),
   component: SoftwareDevelopmentPage,
 });

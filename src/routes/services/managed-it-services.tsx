@@ -22,20 +22,34 @@ const industryItems = [
 export const Route = createFileRoute("/services/managed-it-services")({
   head: () => ({
     meta: [
-      { title: "Managed IT Services | MetaMind" },
+      {
+        title: "Managed IT Services in Kenya | MetaMind",
+      },
       {
         name: "description",
         content:
-          "24/7 infrastructure monitoring, help desk, managed cloud, backup and recovery, and business continuity services.",
+          "Managed IT services, infrastructure monitoring, technical support, cloud management, backup and recovery for businesses in Kenya and beyond.",
       },
-      { property: "og:title", content: "Managed IT Services — MetaMind" },
+      {
+        property: "og:title",
+        content: "Managed IT Services in Kenya | MetaMind",
+      },
       {
         property: "og:description",
-        content: "Predictable IT operations so you can focus on your business.",
+        content:
+          "Reliable managed IT operations, proactive monitoring and expert technical support that keep your business systems secure and available.",
       },
-      { property: "og:url", content: "/services/managed-it-services" },
+      {
+        property: "og:url",
+        content: "https://metamindlimited.co.ke/services/managed-it-services",
+      },
     ],
-    links: [{ rel: "canonical", href: "/services/managed-it-services" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://metamindlimited.co.ke/services/managed-it-services",
+      },
+    ],
   }),
   component: ManagedITServicesPage,
 });

@@ -22,20 +22,34 @@ const industryItems = [
 export const Route = createFileRoute("/services/it-consulting")({
   head: () => ({
     meta: [
-      { title: "IT Consulting Services | MetaMind" },
+      {
+        title: "IT Consulting Services in Kenya | MetaMind",
+      },
       {
         name: "description",
         content:
-          "Digital strategy, technology roadmaps, architecture consulting and transformation planning for ambitious organizations.",
+          "IT consulting, digital strategy, technology roadmaps and architecture advisory for businesses in Kenya and beyond.",
       },
-      { property: "og:title", content: "IT Consulting — MetaMind" },
+      {
+        property: "og:title",
+        content: "IT Consulting Services in Kenya | MetaMind",
+      },
       {
         property: "og:description",
-        content: "Senior advisory that aligns technology investment with business outcomes.",
+        content:
+          "Strategic IT consulting that aligns technology investments with business goals, growth and operational efficiency.",
       },
-      { property: "og:url", content: "/services/it-consulting" },
+      {
+        property: "og:url",
+        content: "https://metamindlimited.co.ke/services/it-consulting",
+      },
     ],
-    links: [{ rel: "canonical", href: "/services/it-consulting" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://metamindlimited.co.ke/services/it-consulting",
+      },
+    ],
   }),
   component: ITConsultingPage,
 });

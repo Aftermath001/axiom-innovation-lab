@@ -22,20 +22,35 @@ const industryItems = [
 export const Route = createFileRoute("/services/digital-transformation")({
   head: () => ({
     meta: [
-      { title: "Digital Transformation Services | MetaMind" },
+      {
+        title: "Digital Transformation Services in Kenya | MetaMind",
+      },
       {
         name: "description",
         content:
-          "End-to-end digital transformation programs that modernize operations, teams and technology for enterprise organizations.",
+          "Digital transformation solutions that modernize business processes, technology and operations for organizations in Kenya and beyond.",
       },
-      { property: "og:title", content: "Digital Transformation — MetaMind" },
+      {
+        property: "og:title",
+        content: "Digital Transformation Services in Kenya | MetaMind",
+      },
       {
         property: "og:description",
-        content: "Holistic programs that modernize operations, teams and technology.",
+        content:
+          "Modernize business operations with technology, automation and digital solutions built around measurable business outcomes.",
       },
-      { property: "og:url", content: "/services/digital-transformation" },
+      {
+        property: "og:url",
+        content:
+          "https://metamindlimited.co.ke/services/digital-transformation",
+      },
     ],
-    links: [{ rel: "canonical", href: "/services/digital-transformation" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://metamindlimited.co.ke/services/digital-transformation",
+      },
+    ],
   }),
   component: DigitalTransformationPage,
 });
