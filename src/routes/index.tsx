@@ -15,21 +15,35 @@ import { ContactSection } from "@/components/sections/ContactSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MetaMind — Engineering Intelligent Digital Transformation" },
+      {
+        title: "MetaMind — AI Automation & Software Solutions in Kenya",
+      },
       {
         name: "description",
         content:
-          "Software engineering, AI, cloud, cybersecurity and digital transformation for African and global organizations. Nairobi-headquartered technology consultancy.",
+          "MetaMind Limited helps businesses automate customer support, lead generation, appointment booking and repetitive operations using practical AI agents and software solutions.",
       },
-      { property: "og:title", content: "MetaMind — Engineering Intelligent Digital Transformation" },
+      {
+        property: "og:title",
+        content:
+          "MetaMind — AI Automation & Software Solutions in Kenya",
+      },
       {
         property: "og:description",
         content:
-          "Software engineering, AI, cloud, cybersecurity and digital transformation delivered by senior teams.",
+          "AI agents, business automation and software solutions for businesses in Kenya and beyond.",
       },
-      { property: "og:url", content: "/" },
+      {
+        property: "og:url",
+        content: "https://metamindlimited.co.ke/",
+      },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://metamindlimited.co.ke/",
+      },
+    ],
   }),
   component: Home,
 });
