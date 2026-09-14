@@ -283,30 +283,46 @@ export const Route =
        */
 
       scripts: [
+        // GOOGLE ANALYTICS 4
+        {
+          async: true,
+          src: "https://www.googletagmanager.com/gtag/js?id=G-18MYTN5EJG",
+        },
+      
+        {
+          children: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-18MYTN5EJG');
+          `,
+        },
+      
+        // ORGANIZATION STRUCTURED DATA
         {
           type: "application/ld+json",
-
+      
           children: JSON.stringify({
             "@context": "https://schema.org",
-
+      
             "@type": "Organization",
-
+      
             name: "MetaMind Limited",
-
+      
             url: "https://metamindlimited.co.ke/",
-
+      
             // WEBSITE LOGO USED BY STRUCTURED DATA
             logo: "https://metamindlimited.co.ke/favicon.png",
-
+      
             description:
               "MetaMind Limited helps businesses automate customer support, lead generation, appointment booking and repetitive operations using practical AI agents and software solutions.",
-
+      
             address: {
               "@type": "PostalAddress",
               addressLocality: "Nairobi",
               addressCountry: "KE",
             },
-
+      
             areaServed: "Global",
           }),
         },
