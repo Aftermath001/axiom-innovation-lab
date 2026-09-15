@@ -17,10 +17,10 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/about", changefreq: "monthly", priority: "0.7" },
-        
+
           // Main service page
           { path: "/services", changefreq: "monthly", priority: "0.9" },
-        
+
           // Individual service pages
           { path: "/services/ai-automation", changefreq: "monthly", priority: "0.9" },
           { path: "/services/cloud-solutions", changefreq: "monthly", priority: "0.7" },
@@ -42,12 +42,17 @@ export const Route = createFileRoute("/sitemap.xml")({
             changefreq: "monthly",
             priority: "0.9",
           },
-        
+
           // Other important pages
           { path: "/solutions", changefreq: "monthly", priority: "0.8" },
           { path: "/industries", changefreq: "monthly", priority: "0.7" },
           { path: "/case-studies", changefreq: "monthly", priority: "0.8" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
+          {
+            path: "/blog/ai-automation-kenyan-businesses",
+            changefreq: "monthly",
+            priority: "0.7",
+          },
           { path: "/careers", changefreq: "weekly", priority: "0.6" },
           { path: "/contact", changefreq: "yearly", priority: "0.6" },
           { path: "/consultation", changefreq: "yearly", priority: "0.7" },

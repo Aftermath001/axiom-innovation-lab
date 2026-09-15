@@ -19,6 +19,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as BlogAiAutomationKenyanBusinessesRouteImport } from './routes/blog_.ai-automation-kenyan-businesses'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesAiAutomationRouteImport } from './routes/services/ai-automation'
 import { Route as ServicesCloudSolutionsRouteImport } from './routes/services/cloud-solutions'
@@ -79,6 +80,12 @@ const SolutionsRoute = SolutionsRouteImport.update({
   path: '/solutions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogAiAutomationKenyanBusinessesRoute =
+  BlogAiAutomationKenyanBusinessesRouteImport.update({
+    id: '/blog_/ai-automation-kenyan-businesses',
+    path: '/blog/ai-automation-kenyan-businesses',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/services/',
   path: '/services/',
@@ -139,6 +146,7 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
+  '/blog/ai-automation-kenyan-businesses': typeof BlogAiAutomationKenyanBusinessesRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-solutions': typeof ServicesCloudSolutionsRoute
   '/services/cybersecurity': typeof ServicesCybersecurityRoute
@@ -160,6 +168,7 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
+  '/blog/ai-automation-kenyan-businesses': typeof BlogAiAutomationKenyanBusinessesRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-solutions': typeof ServicesCloudSolutionsRoute
   '/services/cybersecurity': typeof ServicesCybersecurityRoute
@@ -182,6 +191,7 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
+  '/blog_/ai-automation-kenyan-businesses': typeof BlogAiAutomationKenyanBusinessesRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-solutions': typeof ServicesCloudSolutionsRoute
   '/services/cybersecurity': typeof ServicesCybersecurityRoute
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/sitemap.xml'
     | '/solutions'
+    | '/blog/ai-automation-kenyan-businesses'
     | '/services/ai-automation'
     | '/services/cloud-solutions'
     | '/services/cybersecurity'
@@ -226,6 +237,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/sitemap.xml'
     | '/solutions'
+    | '/blog/ai-automation-kenyan-businesses'
     | '/services/ai-automation'
     | '/services/cloud-solutions'
     | '/services/cybersecurity'
@@ -247,6 +259,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/sitemap.xml'
     | '/solutions'
+    | '/blog_/ai-automation-kenyan-businesses'
     | '/services/ai-automation'
     | '/services/cloud-solutions'
     | '/services/cybersecurity'
@@ -269,6 +282,7 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolutionsRoute: typeof SolutionsRoute
+  BlogAiAutomationKenyanBusinessesRoute: typeof BlogAiAutomationKenyanBusinessesRoute
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
   ServicesCloudSolutionsRoute: typeof ServicesCloudSolutionsRoute
   ServicesCybersecurityRoute: typeof ServicesCybersecurityRoute
@@ -352,6 +366,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/ai-automation-kenyan-businesses': {
+      id: '/blog_/ai-automation-kenyan-businesses'
+      path: '/blog/ai-automation-kenyan-businesses'
+      fullPath: '/blog/ai-automation-kenyan-businesses'
+      preLoaderRoute: typeof BlogAiAutomationKenyanBusinessesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/': {
       id: '/services/'
       path: '/services'
@@ -429,6 +450,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolutionsRoute: SolutionsRoute,
+  BlogAiAutomationKenyanBusinessesRoute: BlogAiAutomationKenyanBusinessesRoute,
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
   ServicesCloudSolutionsRoute: ServicesCloudSolutionsRoute,
   ServicesCybersecurityRoute: ServicesCybersecurityRoute,

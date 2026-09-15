@@ -3,13 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "./ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetTitle,
-  SheetHeader,
-} from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "./ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -23,9 +17,8 @@ const primaryLinks = [
   { to: "/solutions", label: "Solutions" },
   { to: "/industries", label: "Industries" },
   { to: "/case-studies", label: "Case Studies" },
+  { to: "/blog", label: "Blog" },
   { to: "/about", label: "About" },
-  // { to: "/blog", label: "Blog" },
-  // { to: "/careers", label: "Careers" },
 ] as const;
 
 export function Navbar() {
@@ -42,9 +35,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-border/60 bg-background/70 backdrop-blur-xl"
-          : "bg-transparent"
+        scrolled ? "border-b border-border/60 bg-background/70 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <div className="container-wide flex h-16 items-center justify-between gap-6">
@@ -110,11 +101,19 @@ export function Navbar() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-sm border-l border-border/60 bg-ink p-0">
+            <SheetContent
+              side="right"
+              className="w-full max-w-sm border-l border-border/60 bg-ink p-0"
+            >
               <SheetHeader className="border-b border-border/60 p-4">
                 <SheetTitle className="flex items-center justify-between">
                   <Logo />
-                  <Button variant="ghost" size="icon" aria-label="Close menu" onClick={() => setOpen(false)}>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    aria-label="Close menu"
+                    onClick={() => setOpen(false)}
+                  >
                     <X className="h-5 w-5" />
                   </Button>
                 </SheetTitle>
@@ -126,13 +125,13 @@ export function Navbar() {
                     <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
                   </summary>
                   <div className="mt-2 flex flex-col gap-1 pl-1">
-                     {serviceLinks.map((s) => (
-                       <Link
-                         key={s.slug}
-                         to={`/services/${s.slug}`}
-                         className="rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
-                         onClick={() => setOpen(false)}
-                       >
+                    {serviceLinks.map((s) => (
+                      <Link
+                        key={s.slug}
+                        to={`/services/${s.slug}`}
+                        className="rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
+                        onClick={() => setOpen(false)}
+                      >
                         {s.title}
                       </Link>
                     ))}

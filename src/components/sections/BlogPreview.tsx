@@ -14,7 +14,9 @@ export function BlogPreview() {
             <SectionHeading>Fresh thinking from our engineers.</SectionHeading>
           </div>
           <Button asChild variant="ghost" size="sm">
-            <Link to="/blog">Read the blog <ArrowRight className="ml-1 h-4 w-4" /></Link>
+            <Link to="/blog">
+              Read the blog <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
           </Button>
         </div>
 
@@ -22,7 +24,7 @@ export function BlogPreview() {
           {blogPosts.map((p) => (
             <Link
               key={p.slug}
-              to="/blog"
+              to="/blog/ai-automation-kenyan-businesses"
               className="card-hover group flex flex-col rounded-2xl border border-border/60 bg-card/60 p-6"
             >
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest">
